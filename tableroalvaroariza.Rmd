@@ -1,0 +1,85 @@
+---
+title: "La Carrera la Luz"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: 
+      bg: "#FFFFE0"
+      fg: "#0000CD" 
+      primary: "#FF4040"
+      base_font:
+        google: Prompt
+      code_font:
+        google: JetBrains Mono
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(paqueteMET)
+library(devtools)
+library(remotes)
+library(highcharter)
+library(gt)
+library(htmltools)
+library(viridis)
+library(ggplot2)
+library(DT)
+
+# Install thematic and un-comment for themed static plots (i.e., ggplot2)
+# thematic::thematic_rmd()
+```
+```{r}
+data("CarreraLuz22")
+```
+# Datos generales y promedios de tiempos carrera
+## Column {data-width=250 .tabset}
+-----------------------------------------------------------------------
+
+### Relacion de edad y sexo
+
+```{r}
+ggplot(CarreraLuz22, aes(x = edad, y = sex)) +
+  geom_point()
+```
+
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### Total de Atletas que participaron en La Carrera la Luz Cali-Colombia
+
+```{r}
+valueBox(1922, icon = "fa-pencil")
+```
+
+### Tiempo Promedio/min de los Hombres Categoria 3. Veteranos A
+
+```{r}
+gauge(62, min = 0, max = 100)
+```
+### Tiempo Promedio/min de los Mujeres Categoria 2. Abierta
+
+```{r}
+gauge(70, min = 0, max = 100)
+```
+### Tiempo Promedio/min de todos los participantes de la carrera
+
+```{r}
+gauge(65, min = 0, max = 100)
+```
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+### Frecuencia Edad de los Participantes
+
+```{r}
+hist(CarreraLuz22$edad, col = blues9)
+```
+
+
+# Tabla de Datos
+
+```{r}
+datatable(CarreraLuz22)
+```
