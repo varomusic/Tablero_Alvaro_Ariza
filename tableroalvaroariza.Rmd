@@ -83,3 +83,15 @@ hist(CarreraLuz22$edad, col = blues9)
 ```{r}
 datatable(CarreraLuz22)
 ```
+
+# Desarrollo de la actividad
+
+```{r, echo=FALSE, out.width="30%", fig.align = "center"}
+knitr::include_graphics("carrera1.png")
+```
+
+Al desarrollar La actividad de la unidad 1 se pudo evidenciar la forma como se construye un tablero con Rstudio, descargando e instalando algunos paquetes requeridos, creando la plantilla del tablero, ajustando el formato, incorporando elementos al tablero y publicando en formato html con la ayuda de Github para la visualización de los resultados de cualquier investigación o estudio de datos.
+
+# Analisis de  Datos 
+
+Los tableros de proyecto en Github son de gran ayuda y utilidad para organizar y priorizar los trabajos con el fin de automatizar los proyectos. En este caso, el proyecto relacionado está asociado a una carrera realizada en la ciudad de cali en Colombia y las personas inscritas ayudan directamente al progama Compromiso del Valle por los emprendedores y las escuelas de iniciación deportiva de la ciudad. En la visualización del tablero se puede observar los datos generales y promedio de tiempos de la carrera, la cantidad de atletas que participaron, el tiempo promedio por categorias de hombre y mujeres, la relacion de edad y sexo y la tabla de datos generalizada y especificada por todas las categorias, nacionalidad, ciudad, sexo y tiempos.
